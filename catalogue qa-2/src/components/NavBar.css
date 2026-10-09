@@ -1,0 +1,379 @@
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.side-nav {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 270px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 20px;
+
+  background: #171a2d;
+  color: #ffffff;
+
+  z-index: 1000;
+
+  overflow-y: auto;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.side-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 8px;
+  margin-bottom: 38px;
+}
+
+.brand-mark {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.brand-text strong {
+  font-size: 16px;
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+.brand-text span {
+  margin-top: 5px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #858ba8;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.side-section-label {
+  padding: 0 10px;
+  margin-bottom: 12px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  color: #737994;
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.side-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.side-link {
+  width: 100%;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0 14px;
+
+  border-radius: 14px;
+
+  color: #9da3bd;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.side-link svg {
+  flex-shrink: 0;
+}
+
+.side-link:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.side-link.active {
+  color: #ff674f;
+
+  background: #f8f7ff;
+}
+
+.side-link.active svg {
+  color: #ff674f;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.side-bottom {
+  margin-top: auto;
+
+  padding-top: 30px;
+}
+
+.mini-card {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.mini-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #7258ff;
+
+  color: #ffffff;
+}
+
+.mini-card-text {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.mini-card-text strong {
+  font-size: 11px;
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+.mini-card-text span {
+  margin-top: 3px;
+
+  font-size: 9px;
+
+  color: #777e9b;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .side-nav {
+    width: 220px;
+
+    padding: 26px 14px;
+  }
+
+  .side-brand {
+    margin-bottom: 30px;
+  }
+
+  .side-link {
+    padding: 0 12px;
+
+    gap: 11px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .side-nav {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    bottom: auto;
+
+    width: 100%;
+    height: auto;
+
+    min-height: auto;
+
+    padding: 14px;
+
+    overflow: visible;
+  }
+
+
+  /* Brand */
+
+  .side-brand {
+    margin-bottom: 14px;
+
+    padding: 0 4px;
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+  }
+
+  .brand-text strong {
+    font-size: 15px;
+  }
+
+  .brand-text span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+
+  /* Workspace */
+
+  .side-section-label {
+    display: none;
+  }
+
+
+  /* Navigation becomes horizontal */
+
+  .side-links {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 2px 0 6px;
+
+    scrollbar-width: none;
+  }
+
+  .side-links::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .side-link {
+    width: auto;
+    min-width: max-content;
+
+    min-height: 42px;
+
+    padding: 0 13px;
+
+    border-radius: 12px;
+
+    gap: 8px;
+
+    font-size: 13px;
+  }
+
+
+  /* Hide bottom card on mobile */
+
+  .side-bottom {
+    display: none;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .side-nav {
+    padding: 12px 10px;
+  }
+
+  .side-link {
+    min-height: 40px;
+
+    padding: 0 11px;
+
+    font-size: 12px;
+  }
+
+}
